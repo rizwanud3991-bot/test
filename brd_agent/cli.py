@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import os
 import sys
 import time
 from pathlib import Path
@@ -120,6 +121,9 @@ def main(argv: list[str] | None = None) -> None:
     ask.set_defaults(func=_ask)
 
     args = parser.parse_args(argv)
+    # A key pasted into a terminal often carries stray spaces, which the API rejects.
+    if os.environ.get("ANTHROPIC_API_KEY"):
+        os.environ["ANTHROPIC_API_KEY"] = os.environ["ANTHROPIC_API_KEY"].strip()
     try:
         args.func(args)
     except KeyboardInterrupt:

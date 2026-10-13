@@ -8,7 +8,17 @@ strategy, traceability, executive and business summaries, and slide decks. It's 
 Each document is saved the moment its stage finishes, so you can start reading the analysis while
 the design is still being written.
 
-## Quick start
+## Easiest way: double-click START (no typing)
+
+1. Install Python from [python.org/downloads](https://www.python.org/downloads/). On Windows, tick **"Add Python to PATH"**.
+2. Get a Claude key at [console.anthropic.com](https://console.anthropic.com) (**API Keys → Create Key**). Each run costs money.
+3. Double-click **`START-Windows.bat`** on Windows, or **`START-Mac.command`** on a Mac. On a Mac, if it is blocked the first time, right-click it and choose **Open**.
+4. The first time, it sets itself up and asks for your key. After that it remembers the key.
+5. Press **1**, put your documents in the **brds** folder that opens, and press a key. The results open by themselves when they're ready.
+
+From the menu you can also press **2** to ask questions about your project, or **3** to change your key.
+
+## Quick start (command line)
 
 ```bash
 pip install -r requirements.txt
